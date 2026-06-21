@@ -59,6 +59,24 @@ Using a local server is preferred because it more closely matches how links, scr
 
 ---
 
+
+### Condition expansion in this update
+
+This bundle adds the following condition pages and intake options:
+
+- `eczema.html`
+- `perioral-dermatitis.html`
+- `folliculitis.html`
+- `fungal-infections.html`
+- `intertrigo.html`
+- `impetigo.html`
+- `scabies.html`
+- `genital-warts.html`
+- `nail-fungus.html`
+- `aphthous-ulcers.html`
+
+The public `conditions.html` page now uses a featured list plus a collapsible **More conditions** section to avoid an overly long visible list.
+
 ## Recommended File Structure
 
 The uploaded prototype files are currently flat HTML files. For the GitHub repo, use clean filenames without upload suffixes such as `(1)` or `(2)`.

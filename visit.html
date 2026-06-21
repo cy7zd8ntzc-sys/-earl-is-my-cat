@@ -71,7 +71,7 @@
   </a>
   <span class="secure">Reviewed by Dr. Eckert &nbsp;·&nbsp; <a href="index.html">Exit</a></span>
 </header>
-<div class="demo">Preview only — this form isn't connected to a secure system yet, so please don't enter real personal or medical details.</div>
+<div class="demo">Preview only — this form isn't connected to a secure system yet, so please don't enter real personal or medical details. Cash-pay only; prescriptions, when appropriate, may be sent to a licensed third-party compounding pharmacy or another pharmacy.</div>
 
 <div class="shell">
   <div class="progress" id="progress">Step 1 of 6</div>
@@ -82,7 +82,7 @@
     <!-- 1 CONCERN -->
     <section class="step active" data-step>
       <h2>What can Dr. Eckert help with?</h2>
-      <p class="sub">Pick what fits best — you can explain more in a moment.</p>
+      <p class="sub">Pick what fits best — you can explain more in a moment. More specialized concerns are included below without turning the public site into a giant list.</p>
       <div class="q"><div class="optgrid" id="concernGrid"></div>
         <p class="err-msg" data-err>Please choose one to continue.</p></div>
       <div class="q"><label class="lab" for="concernMore">Tell us a little more about what's going on</label>
@@ -150,7 +150,7 @@
       <p class="sub">Make sure this looks right before it goes to Dr. Eckert.</p>
       <div class="review" id="reviewBox"></div><p style="font-size:13.5px;color:var(--ink-soft);margin-bottom:16px;">Most visits and prescription treatments are FSA/HSA eligible.</p>
       <label class="consent"><input type="checkbox" id="consent">
-        <span>I understand a board-certified dermatologist will review this, that this isn't an emergency service, and that a prescription isn't guaranteed.</span></label>
+        <span>I understand a board-certified dermatologist will review this, that this isn't an emergency service, and that a prescription, compounded or otherwise, isn't guaranteed.</span></label>
       <p class="err-msg" id="consentErr">Please confirm to send your visit.</p>
     </section>
 
@@ -171,7 +171,7 @@
 </div>
 
 <script>
-  var CONCERNS=[["acne","Acne"],["rosacea","Rosacea & redness"],["melasma","Melasma"],["dark-spots","Dark spots"],["aging","Fine lines & aging"],["hairloss","Hair loss"],["eyelash","Eyelash growth"],["warts","Warts"],["molluscum","Molluscum"],["herpes","Cold sores & herpes"],["sweating","Excessive sweating"],["hs","Hidradenitis suppurativa"],["seb-derm","Seborrheic dermatitis"],["keratosis-pilaris","Keratosis pilaris"],["other","Something else"]];
+  var CONCERNS=[["acne","Acne"],["rosacea","Rosacea & redness"],["melasma","Melasma"],["dark-spots","Dark spots / PIH"],["aging","Fine lines & aging"],["hairloss","Hair loss"],["eczema","Eczema"],["seb-derm","Dandruff / seborrheic dermatitis"],["sweating","Excessive sweating"],["warts","Warts"],["molluscum","Molluscum"],["herpes","Cold sores & herpes"],["perioral-dermatitis","Perioral dermatitis"],["folliculitis","Folliculitis / ingrown hairs"],["fungal-infections","Fungal rash"],["intertrigo","Intertrigo / yeast rash"],["impetigo","Impetigo"],["scabies","Scabies"],["genital-warts","Genital warts"],["nail-fungus","Nail fungus"],["aphthous-ulcers","Aphthous ulcers / canker sores"],["hs","Hidradenitis suppurativa"],["keratosis-pilaris","Keratosis pilaris"],["eyelash","Eyelash growth"],["other","Something else"]];
   var US_STATES=["AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY","DC"];
   // TODO: replace with Dr. Eckert's actual 25 licensed states.
   var LICENSED=["AL","AZ","CA","CO","CT","FL","GA","IL","IN","MA","MD","MI","MN","NC","NV","NY","OH","OR","PA","TN","TX","UT","VA","WA","WI"];
