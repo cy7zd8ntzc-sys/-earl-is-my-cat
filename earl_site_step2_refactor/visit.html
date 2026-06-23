@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Start a visit — Earl Is My Cat</title>
+<meta content="Start an online dermatology visit with Dr. Auston Eckert." name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&amp;family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="assets/css/visit.css" rel="stylesheet"/>
+</head>
+<body class="page-visit">
+<header class="vhead">
+<a class="brand" href="index.html">
+<span aria-hidden="true" class="dot"><svg fill="none" viewbox="0 0 26 26"><path d="M3 9 5 3l4 3.5h8L21 3l2 6v9a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V9Z" fill="#221F1B"></path><circle cx="10" cy="13" fill="#3DA8AE" r="1.5"></circle><circle cx="16" cy="13" fill="#3DA8AE" r="1.5"></circle></svg></span>
+    Earl Is My Cat
+  </a>
+<span class="secure">Reviewed by Dr. Eckert  ·  <a href="index.html">Exit</a></span>
+</header>
+<div class="demo">Preview only — this form isn't connected to a secure system yet, so please don't enter real personal or medical details. Cash-pay only; prescriptions, when appropriate, may be sent to a licensed third-party compounding pharmacy or another pharmacy.</div>
+<div class="shell">
+<div class="progress" id="progress">Step 1 of 6</div>
+<div class="bar"><i id="barfill"></i></div>
+<form id="visitForm" novalidate="">
+<!-- 1 CONCERN -->
+<section class="step active" data-step="">
+<h2>What can Dr. Eckert help with?</h2>
+<p class="sub">Pick what fits best — you can explain more in a moment. More specialized concerns are included below without turning the public site into a giant list.</p>
+<div class="q"><div class="optgrid" id="concernGrid"></div>
+<p class="err-msg" data-err="">Please choose one to continue.</p></div>
+<div class="q"><label class="lab" for="concernMore">Tell us a little more about what's going on</label>
+<textarea id="concernMore" placeholder="When it started, what it looks/feels like, anything that makes it better or worse…"></textarea></div>
+</section>
+<!-- 2 DETAILS -->
+<section class="step" data-step="">
+<h2>A few details</h2>
+<p class="sub">This helps Dr. Eckert get the full picture.</p>
+<div class="q"><label class="lab" for="duration">How long has this been going on?</label>
+<select id="duration"><option value="">Select…</option><option>Less than a week</option><option>1–4 weeks</option><option>1–6 months</option><option>6+ months</option></select></div>
+<div class="q"><label class="lab" for="bother">How much is it bothering you?</label>
+<select id="bother"><option value="">Select…</option><option>Just a little</option><option>Moderately</option><option>Quite a lot</option></select></div>
+<div class="q"><label class="lab" for="tried">What have you already tried?</label>
+<textarea id="tried" placeholder="Products, prescriptions, home remedies — and whether anything helped."></textarea></div>
+</section>
+<!-- 3 PHOTOS -->
+<section class="step" data-step="">
+<h2>Add a few photos</h2>
+<p class="sub">Clear photos help Dr. Eckert review your skin accurately.</p>
+<label class="dropzone" for="photoInput">
+<b>Tap to add photos</b><br/>or drag images here
+        <input accept="image/*" hidden="" id="photoInput" multiple="" type="file"/>
+</label>
+<div class="previews" id="previews"></div>
+<ul class="tips">
+<li>Use natural light and a steady, in-focus shot.</li>
+<li>Include one close-up and one a little farther back.</li>
+<li>2–4 photos is plenty.</li>
+</ul>
+</section>
+<!-- 4 HEALTH -->
+<section class="step" data-step="">
+<h2>Your health background</h2>
+<p class="sub">A quick snapshot keeps things safe.</p>
+<div class="q"><label class="lab" for="allergies">Any allergies?</label><input id="allergies" placeholder="Medications, ingredients… or 'none'" type="text"/></div>
+<div class="q"><label class="lab" for="meds">Current medications</label><input id="meds" placeholder="Including supplements… or 'none'" type="text"/></div>
+<div class="q"><label class="lab" for="conditions">Other medical conditions</label><input id="conditions" placeholder="Anything Dr. Eckert should know… or 'none'" type="text"/></div>
+<div class="q"><label class="lab" for="preg">Are you pregnant or breastfeeding?</label>
+<select id="preg"><option value="">Select…</option><option>No</option><option>Yes</option><option>Not applicable</option><option>Prefer not to say</option></select></div>
+</section>
+<!-- 5 ABOUT YOU -->
+<section class="step" data-step="">
+<h2>A little about you</h2>
+<p class="sub">We need this to confirm Dr. Eckert is licensed where you live.</p>
+<div class="q"><div class="row2">
+<div><label class="lab" for="first">First name</label><input id="first" type="text"/></div>
+<div><label class="lab" for="last">Last name</label><input id="last" type="text"/></div>
+</div></div>
+<div class="q"><div class="row2">
+<div><label class="lab" for="dob">Date of birth</label><input id="dob" type="date"/></div>
+<div><label class="lab" for="state">State you live in</label><select id="state"><option value="">Select…</option></select></div>
+</div>
+<p class="gate" id="stateGate">Dr. Eckert isn't licensed in this state yet — but leave your email and we'll let you know the moment that changes.</p></div>
+<div class="q"><label class="lab" for="email">Email</label><input id="email" placeholder="you@email.com" type="email"/></div>
+</section>
+<!-- 6 REVIEW -->
+<section class="step" data-step="">
+<h2>Review &amp; send</h2>
+<p class="sub">Make sure this looks right before it goes to Dr. Eckert.</p>
+<div class="review" id="reviewBox"></div><p class="sub">Most visits and prescription treatments are FSA/HSA eligible.</p>
+<label class="consent"><input id="consent" type="checkbox"/>
+<span>I understand a board-certified dermatologist will review this, that this isn't an emergency service, and that a prescription, compounded or otherwise, isn't guaranteed.</span></label>
+<p class="err-msg" id="consentErr">Please confirm to send your visit.</p>
+</section>
+<div class="navrow">
+<button class="btn btn-ghost is-invisible" id="backBtn" type="button">Back</button>
+<button class="btn btn-primary" id="nextBtn" type="button">Continue</button>
+</div>
+</form>
+<!-- CONFIRMATION -->
+<section class="confirm hidden" id="confirm">
+<div aria-hidden="true" class="check"><svg fill="none" height="30" viewbox="0 0 24 24" width="30"><path d="M5 12.5l4.5 4.5L19 7.5" stroke="#20484C" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4"></path></svg></div>
+<h2 id="confirmName">Thanks!</h2>
+<p>Dr. Eckert will personally review your visit and get back to you, usually within one business day.</p>
+<p>If anything urgent comes up in the meantime, please contact your local care or emergency services.</p>
+<p class="mt-22"><a class="btn btn-warm" href="index.html">Back to home</a></p>
+</section>
+</div>
+<p class="center-fineprint"><a href="terms.html">Terms</a>  ·  <a href="privacy.html">Privacy</a>  ·  <a href="consent.html">Telehealth Consent</a></p><script defer="" src="assets/js/site.js"></script><script defer="" src="assets/js/visit.js"></script></body>
+</html>
