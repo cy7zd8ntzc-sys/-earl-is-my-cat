@@ -1,0 +1,325 @@
+{
+  "version": "2026-06-step4b-adult-only-safety-patch",
+  "status": "prototype-not-production",
+  "photoPolicy": {
+    "defaultMinimum": 3,
+    "reason": "Operational standard for asynchronous teledermatology review; the adult-only gate must be completed before photos are requested.",
+    "requiredViews": [
+      "close-up in focus",
+      "mid-distance showing the surrounding skin",
+      "one additional angle or comparison area"
+    ],
+    "overrideAllowed": true,
+    "overrideText": "I cannot provide 3 photos right now and understand Dr. Eckert may request more before making a diagnosis or prescribing."
+  },
+  "globalUrgentFlags": [
+    "Trouble breathing, swallowing, or swelling of lips/tongue/throat",
+    "Fever, feeling very sick, or a rapidly spreading rash/infection",
+    "Severe pain, rapidly worsening swelling, or skin turning black/purple",
+    "Eye involvement, vision changes, or rash/blisters near the eye",
+    "A changing, bleeding, painful, or suspicious mole/spot that may need biopsy"
+  ],
+  "globalCautionFlags": [
+    "Pregnant, trying to become pregnant, or breastfeeding",
+    "Immunocompromised or taking immune-suppressing medication",
+    "Diabetes, poor circulation, organ transplant history, or active cancer treatment",
+    "History of severe medication allergy or anaphylaxis"
+  ],
+  "concerns": [
+    {
+      "id": "acne",
+      "label": "Acne",
+      "page": "acne.html",
+      "urgentFlags": [
+        "Severe swelling around the eyes or face",
+        "Fever or rapidly worsening painful bumps"
+      ],
+      "cautionFlags": [
+        "Severe cystic acne with scarring",
+        "Interested in isotretinoin"
+      ]
+    },
+    {
+      "id": "rosacea",
+      "label": "Rosacea & redness",
+      "page": "rosacea.html",
+      "urgentFlags": [
+        "Eye pain, light sensitivity, or vision changes",
+        "Sudden facial swelling with trouble breathing/swallowing"
+      ],
+      "cautionFlags": [
+        "Frequent flushing triggered by medications or systemic symptoms"
+      ]
+    },
+    {
+      "id": "melasma",
+      "label": "Melasma",
+      "page": "melasma.html",
+      "urgentFlags": [
+        "A spot that is changing quickly, bleeding, painful, or irregular"
+      ],
+      "cautionFlags": [
+        "Pregnant, trying to become pregnant, or breastfeeding"
+      ]
+    },
+    {
+      "id": "dark-spots",
+      "label": "Dark spots / PIH",
+      "page": "dark-spots.html",
+      "urgentFlags": [
+        "A spot that is changing quickly, bleeding, painful, or irregular"
+      ],
+      "cautionFlags": [
+        "History of keloids or scarring",
+        "Recent burn, chemical peel, or procedure"
+      ]
+    },
+    {
+      "id": "aging",
+      "label": "Fine lines & aging",
+      "page": "aging.html",
+      "urgentFlags": [
+        "A changing, bleeding, painful, or suspicious lesion"
+      ],
+      "cautionFlags": [
+        "Pregnant, trying to become pregnant, or breastfeeding",
+        "Recent cosmetic procedure or laser treatment"
+      ]
+    },
+    {
+      "id": "hairloss",
+      "label": "Hair loss",
+      "page": "hairloss.html",
+      "urgentFlags": [
+        "Painful scalp swelling, drainage, or fever",
+        "Rapid hair loss with severe illness symptoms"
+      ],
+      "cautionFlags": [
+        "Patchy hair loss",
+        "Scalp scaling, pustules, or scarring",
+        "Pregnant, trying to become pregnant, or breastfeeding"
+      ]
+    },
+    {
+      "id": "seb-derm",
+      "label": "Dandruff / seborrheic dermatitis",
+      "page": "seb-derm.html",
+      "urgentFlags": [
+        "Painful scalp swelling, drainage, or fever"
+      ],
+      "cautionFlags": [
+        "Severe scalp pain or hair loss",
+        "Immunocompromised"
+      ]
+    },
+    {
+      "id": "sweating",
+      "label": "Excessive sweating",
+      "page": "sweating.html",
+      "urgentFlags": [
+        "Chest pain, fainting, shortness of breath, or new neurologic symptoms",
+        "New night sweats with fever or unexplained weight loss",
+        "New one-sided sweating"
+      ],
+      "cautionFlags": [
+        "Pregnant, trying to become pregnant, or breastfeeding",
+        "History of glaucoma, urinary retention, or heart rhythm problems"
+      ]
+    },
+    {
+      "id": "warts",
+      "label": "Warts",
+      "page": "warts.html",
+      "urgentFlags": [
+        "Rapidly changing, bleeding, or very painful growth",
+        "Signs of infection such as fever, spreading redness, or pus"
+      ],
+      "cautionFlags": [
+        "Genital-area lesions",
+        "Diabetes, poor circulation, or immunocompromised"
+      ]
+    },
+    {
+      "id": "herpes",
+      "label": "Cold sores & herpes",
+      "page": "herpes.html",
+      "urgentFlags": [
+        "Eye pain, eye redness, or sores near the eye",
+        "Confusion, severe headache, stiff neck, or neurologic symptoms",
+        "Widespread blisters, fever, or severe illness"
+      ],
+      "cautionFlags": [
+        "Pregnant or immunocompromised",
+        "New genital sores or possible STI exposure"
+      ]
+    },
+    {
+      "id": "perioral-dermatitis",
+      "label": "Perioral dermatitis",
+      "page": "perioral-dermatitis.html",
+      "urgentFlags": [
+        "Eye involvement or vision changes",
+        "Severe facial swelling or trouble breathing/swallowing"
+      ],
+      "cautionFlags": [
+        "Recent topical steroid use on the face",
+        "Pregnant, trying to become pregnant, or breastfeeding"
+      ]
+    },
+    {
+      "id": "folliculitis",
+      "label": "Folliculitis / ingrown hairs",
+      "page": "folliculitis.html",
+      "urgentFlags": [
+        "Large painful abscess, fever, or rapidly spreading redness",
+        "Severe pain or skin turning dark/black"
+      ],
+      "cautionFlags": [
+        "Recurrent boils",
+        "Diabetes, immunocompromised, or history of MRSA"
+      ]
+    },
+    {
+      "id": "fungal-infections",
+      "label": "Fungal rash",
+      "page": "fungal-infections.html",
+      "urgentFlags": [
+        "Fever, severe pain, rapidly spreading rash, or skin breakdown",
+        "Rash near the eye"
+      ],
+      "cautionFlags": [
+        "Diabetes or immunocompromised",
+        "Nail/scalp involvement or widespread rash"
+      ]
+    },
+    {
+      "id": "intertrigo",
+      "label": "Intertrigo / yeast rash",
+      "page": "intertrigo.html",
+      "urgentFlags": [
+        "Fever, severe pain, spreading warmth/redness, or open wounds",
+        "Rapidly worsening rash in skin folds"
+      ],
+      "cautionFlags": [
+        "Diabetes or immunocompromised",
+        "Recurrent or widespread flares"
+      ]
+    },
+    {
+      "id": "impetigo",
+      "label": "Impetigo",
+      "page": "impetigo.html",
+      "urgentFlags": [
+        "Fever, rapidly spreading redness, severe pain, or facial/eye swelling"
+      ],
+      "cautionFlags": [
+        "Recurrent infections or household outbreak",
+        "Immunocompromised"
+      ]
+    },
+    {
+      "id": "scabies",
+      "label": "Scabies",
+      "page": "scabies.html",
+      "urgentFlags": [
+        "Crusted/thick widespread scaling, fever, or severe infection signs"
+      ],
+      "cautionFlags": [
+        "Household, school, nursing facility, or group-living outbreak",
+        "Pregnant, breastfeeding, or immunocompromised"
+      ]
+    },
+    {
+      "id": "genital-warts",
+      "label": "Genital warts",
+      "page": "genital-warts.html",
+      "urgentFlags": [
+        "Severe pelvic/testicular pain, fever, or painful genital ulcers",
+        "Pregnancy with rapidly changing genital lesions"
+      ],
+      "cautionFlags": [
+        "New STI exposure or multiple symptoms",
+        "Immunocompromised"
+      ]
+    },
+    {
+      "id": "nail-fungus",
+      "label": "Nail fungus",
+      "page": "nail-fungus.html",
+      "urgentFlags": [
+        "Diabetic foot wound, severe pain, spreading redness, or drainage"
+      ],
+      "cautionFlags": [
+        "Liver disease or heavy alcohol use",
+        "Interested in oral antifungal medication",
+        "Pregnant, trying to become pregnant, or breastfeeding"
+      ]
+    },
+    {
+      "id": "aphthous-ulcers",
+      "label": "Aphthous ulcers / canker sores",
+      "page": "aphthous-ulcers.html",
+      "urgentFlags": [
+        "Trouble swallowing, dehydration, or severe mouth swelling",
+        "Mouth ulcer lasting more than 2 weeks or unexplained weight loss",
+        "Eye/genital ulcers with mouth ulcers"
+      ],
+      "cautionFlags": [
+        "Frequent recurrent ulcers",
+        "Immune suppression, inflammatory bowel disease, or new medication"
+      ]
+    },
+    {
+      "id": "hs",
+      "label": "Hidradenitis suppurativa",
+      "page": "hs.html",
+      "urgentFlags": [
+        "Fever, rapidly spreading redness, severe pain, or abscess needing drainage"
+      ],
+      "cautionFlags": [
+        "Pregnant, trying to become pregnant, or breastfeeding",
+        "Recurrent draining tunnels or severe scarring"
+      ]
+    },
+    {
+      "id": "keratosis-pilaris",
+      "label": "Keratosis pilaris",
+      "page": "keratosis-pilaris.html",
+      "urgentFlags": [
+        "Rapidly spreading painful rash, fever, or pus"
+      ],
+      "cautionFlags": [
+        "Very inflamed or painful bumps"
+      ]
+    },
+    {
+      "id": "eyelash",
+      "label": "Eyelash growth",
+      "page": "eyelash.html",
+      "urgentFlags": [
+        "Eye pain, vision change, eye redness, or eye injury"
+      ],
+      "cautionFlags": [
+        "History of glaucoma, eye surgery, or eye inflammation",
+        "Pregnant, trying to become pregnant, or breastfeeding"
+      ]
+    },
+    {
+      "id": "other",
+      "label": "Something else",
+      "page": "conditions.html",
+      "urgentFlags": [
+        "Severe symptoms, fever, rapidly spreading rash, eye involvement, or suspicious changing lesion"
+      ],
+      "cautionFlags": [
+        "Not sure whether this can be handled online"
+      ]
+    }
+  ],
+  "eligibility": {
+    "minimumAge": 18,
+    "patientMustBeAdult": true,
+    "guardianFlowIncluded": false,
+    "hardStopText": "This service is currently available only to patients 18 and older."
+  }
+}
