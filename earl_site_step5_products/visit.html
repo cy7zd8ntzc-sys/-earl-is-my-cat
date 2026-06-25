@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Start a visit — Earl Is My Cat</title>
+<meta content="Start a cash-pay online dermatology visit with Dr. Auston Eckert." name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&amp;family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="assets/css/visit.css" rel="stylesheet"/>
+</head>
+<body class="page-visit">
+<header class="vhead">
+<a aria-label="Earl Is My Cat home" class="brand" href="index.html">
+<span aria-hidden="true" class="dot"><svg fill="none" viewbox="0 0 26 26"><path d="M3 9 5 3l4 3.5h8L21 3l2 6v9a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V9Z" fill="#221F1B"></path><circle cx="10" cy="13" fill="#3DA8AE" r="1.5"></circle><circle cx="16" cy="13" fill="#3DA8AE" r="1.5"></circle></svg></span>
+    Earl Is My Cat
+  </a>
+<span class="secure">Secure visit prototype · <a href="index.html">Exit</a></span>
+</header>
+<div class="demo">Preview only — this intake is not connected to a secure clinical system, payment processor, or pharmacy yet. Do not enter real personal, payment, or medical details.</div>
+<main class="shell">
+<div class="progress" id="progress">Step 1 of 6</div>
+<div aria-hidden="true" class="bar"><i id="barfill"></i></div>
+<form id="visitForm" novalidate="">
+<section class="step active" data-step="concern">
+<p class="eyebrow">Step 1</p>
+<h1>What do you want help with?</h1>
+<p class="sub">Confirm adult eligibility, pick the closest match, and give a short description. The goal is enough information to make a safe decision, not a long questionnaire.</p><div class="eligibility-box"><h2>Adults only</h2><p>This online visit flow is currently for patients 18 and older only. Do not continue or upload photos for a minor.</p><label class="nonebox eligibility-check"><input id="ageConfirm" type="checkbox"/> <span>I confirm the patient is 18 or older and I am authorized to submit this visit.</span></label><p class="err-msg" data-err="ageConfirm">This service is currently only for adults 18 and older.</p></div>
+<div class="q">
+<div aria-label="Skin concern" class="optgrid" id="concernGrid" role="radiogroup"></div>
+<p class="err-msg" data-err="concern">Please choose one concern to continue.</p>
+</div>
+<div class="q">
+<label class="lab" for="chiefConcern">In one or two sentences, what is going on?</label>
+<textarea data-required="true" id="chiefConcern" placeholder="Example: Red bumps around my mouth for 3 months, worse after steroid cream. I want to know what it is and whether prescription treatment makes sense."></textarea>
+<p class="hint">Include what it looks like, where it is, and what you want help deciding.</p>
+<p class="err-msg" data-err="chiefConcern">Please add a brief description.</p>
+</div>
+<div class="row2 tight">
+<div class="q">
+<label class="lab" for="duration">How long has this been going on?</label>
+<select data-required="true" id="duration"><option value="">Select…</option><option>Less than 1 week</option><option>1–4 weeks</option><option>1–6 months</option><option>More than 6 months</option><option>Comes and goes</option></select>
+<p class="err-msg" data-err="duration">Please select a duration.</p>
+</div>
+<div class="q">
+<label class="lab" for="severity">How much does it bother you?</label>
+<select id="severity"><option value="">Select…</option><option>Mild</option><option>Moderate</option><option>Severe</option></select>
+</div>
+</div>
+<div class="q">
+<label class="lab" for="tried">What have you already tried?</label>
+<textarea class="short" id="tried" placeholder="Products, prescriptions, supplements, home remedies — or 'nothing yet'."></textarea>
+</div>
+</section>
+<section class="step" data-step="photos">
+<p class="eyebrow">Step 2</p>
+<h1>Add photos</h1>
+<p class="sub">Three photos help the most: one overview, one medium-distance photo, and one close-up. Use clear, well-lit images without filters.</p>
+<label class="dropzone" for="photoInput" id="dropzone">
+<b>Tap to add at least 3 photos</b><br/>or drag images here
+        <input accept="image/*" hidden="" id="photoInput" multiple="" type="file"/>
+</label>
+<div class="photo-count" id="photoCount">0 photos added</div>
+<div aria-live="polite" class="previews" id="previews"></div>
+<ul class="tips">
+<li><b>Overview:</b> shows where the problem is on the body.</li>
+<li><b>Medium:</b> shows the involved area with nearby normal skin.</li>
+<li><b>Close-up:</b> clear, bright, in focus, no filters.</li>
+<li>For hair, nails, mouth, or sensitive-area concerns, take the clearest equivalent photos you are comfortable submitting through the secure production system.</li>
+</ul>
+<label class="nonebox photo-override"><input id="photoOverride" type="checkbox"/> I cannot provide 3 photos right now and understand Dr. Eckert may request more before diagnosing or prescribing.</label>
+<p class="err-msg" data-err="photos">Please add at least 3 photos, or check the photo override box.</p>
+</section>
+<section class="step" data-step="medical">
+<p class="eyebrow">Step 3</p>
+<h1>Medical snapshot</h1>
+<p class="sub">One short safety screen. This is the minimum needed before prescribing can be considered.</p>
+<div class="q">
+<label class="lab" for="medicalSnapshot">Allergies, current medications, major medical conditions</label>
+<textarea data-required="true" id="medicalSnapshot" placeholder="Example: No drug allergies. Taking sertraline. History of migraines. Or: none."></textarea>
+<p class="err-msg" data-err="medicalSnapshot">Please add a quick medical snapshot, even if the answer is “none.”</p>
+</div>
+
+<div class="q">
+<label class="lab" for="pregnancy">Pregnant, trying to become pregnant, or breastfeeding?</label>
+<select data-required="true" id="pregnancy"><option value="">Select…</option><option>No</option><option>Yes</option><option>Breastfeeding</option><option>Trying to become pregnant</option><option>Not applicable</option><option>Prefer not to say</option></select>
+<p class="err-msg" data-err="pregnancy">Please select one.</p>
+</div>
+
+
+</section>
+<section class="step" data-step="safety">
+<p class="eyebrow">Step 4</p>
+<h1>Quick safety check</h1>
+<p class="sub">Select any that apply. These answers help decide whether online care is appropriate or whether in-person/urgent care is safer.</p>
+<div class="flagbox" id="redFlagBox"></div>
+<label class="nonebox"><input id="noRedFlags" type="checkbox"/> None of these apply</label>
+<p class="err-msg" data-err="redflags">Please select “none” or choose any safety items that apply.</p>
+<div class="triage-alert hidden" id="triageAlert">
+<b>This may need in-person or urgent care.</b>
+<p>The final review will be marked as triage-only. In production, payment should be skipped or refunded if the concern is redirected before care is delivered.</p>
+</div>
+</section>
+<section class="step" data-step="identity">
+<p class="eyebrow">Step 5</p>
+<h1>Confirm where you are</h1>
+<p class="sub">Dermatology care is based on the state where the patient is physically located at the time of the visit.</p>
+<div class="q"><div class="row2">
+<div><label class="lab" for="first">First name</label><input data-required="true" id="first" type="text"/></div>
+<div><label class="lab" for="last">Last name</label><input data-required="true" id="last" type="text"/></div>
+</div></div>
+<div class="q"><div class="row2">
+<div><label class="lab" for="dob">Date of birth</label><input data-required="true" id="dob" type="date"/></div>
+<div><label class="lab" for="state">Patient state</label><select data-required="true" id="state"><option value="">Select…</option></select></div>
+</div>
+<p class="gate" id="stateGate">Dr. Eckert is not listed as licensed in this state in the prototype. In production, this should stop the visit before payment.</p><p class="gate" id="dobGate">This service is currently available only to patients 18 and older. Do not continue or upload photos for a minor.</p></div>
+<div class="q"><label class="lab" for="email">Email</label><input data-required="true" id="email" placeholder="you@email.com" type="email"/></div>
+<p class="err-msg" data-err="identity">Please complete the required identity fields.</p>
+</section>
+<section class="step" data-step="consent-payment">
+<p class="eyebrow">Step 6</p>
+<h1>Consent, payment, and submit</h1>
+<p class="sub">In production, consent should come before payment. Payment should be handled by a PCI-compliant processor, not by storing card details in this app.</p>
+<div class="review-grid">
+<div aria-live="polite" class="review" id="reviewBox"></div>
+<aside class="payment-card" id="paymentCard">
+<h2>Visit charge</h2>
+<p class="price">$75</p>
+<p class="small">Prototype amount only. Replace with your actual cash-pay fee schedule.</p>
+<div class="pay-sequence">
+<span>1. Consent</span>
+<span>2. Secure payment</span>
+<span>3. Create consult</span>
+</div>
+<p class="small">Production flow: redirect to Stripe Checkout or use Payment Element after consent, then create the consult only after payment success.</p>
+</aside>
+</div>
+<div class="triage-alert hidden" id="finalTriageAlert">
+<b>Safety gate active.</b>
+<p>This visit should be routed for triage/in-person guidance rather than normal paid prescription care.</p>
+</div>
+<label class="consent"><input id="consentAdult" type="checkbox"/> <span>I confirm the patient is 18 or older.</span></label><label class="consent"><input id="consentTelehealth" type="checkbox"/> <span>I agree to the <a href="consent.html" rel="noopener" target="_blank">Telehealth Consent</a> and understand this is not an emergency service.</span></label>
+<label class="consent"><input id="consentRx" type="checkbox"/> <span>I understand a prescription is not guaranteed. If prescribed, medication may be sent to a licensed third-party compounding pharmacy or another pharmacy.</span></label>
+<label class="consent"><input id="consentCash" type="checkbox"/> <span>I understand this is cash-pay only and insurance will not be billed.</span></label>
+<label class="consent"><input id="consentPrivacy" type="checkbox"/> <span>I understand my photos and answers are medical information and should be submitted only through the secure production system.</span></label>
+<p class="err-msg" data-err="consent">Please complete the consent checkboxes before submitting.</p>
+</section>
+<div class="navrow">
+<button class="btn btn-ghost is-invisible" id="backBtn" type="button">Back</button>
+<button class="btn btn-primary" id="nextBtn" type="button">Continue</button>
+</div>
+</form>
+<section class="confirm hidden" id="confirm">
+<div aria-hidden="true" class="check"><svg fill="none" height="30" viewbox="0 0 24 24" width="30"><path d="M5 12.5l4.5 4.5L19 7.5" stroke="#20484C" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4"></path></svg></div>
+<h2 id="confirmName">Visit saved</h2>
+<p id="confirmCopy">Prototype submission saved locally for provider-dashboard review. In production, this would be sent to the secure clinical backend after payment success.</p>
+<p class="mt-22"><a class="btn btn-warm" href="provider.html">Open provider dashboard preview</a></p>
+<p class="mt-14"><a href="index.html">Back to home</a></p>
+</section>
+</main>
+<p class="center-fineprint"><a href="terms.html">Terms</a> · <a href="privacy.html">Privacy</a> · <a href="consent.html">Telehealth Consent</a></p>
+<script defer="" src="assets/js/site.js"></script>
+<script defer="" src="assets/js/visit.js"></script>
+</body>
+</html>

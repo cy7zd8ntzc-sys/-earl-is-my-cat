@@ -1,0 +1,392 @@
+{
+  "version": "2026-06-step5-product-strategy",
+  "status": "internal_and_public_product_strategy_prototype",
+  "disclaimer": "Prototype only. Product categories, copy, pricing, and recommendation logic require regulatory, legal, manufacturer, and clinical review before use. Do not treat this as a finished ecommerce catalog.",
+  "principles": [
+    "Keep prescription treatment out of ecommerce. Prescription items require a completed visit, clinician review, and a patient-specific prescription.",
+    "Keep owned white-label products cosmetic unless deliberately launching a compliant OTC drug product.",
+    "Use affiliate links first for OTC drug categories such as sunscreen, acne medications, dandruff shampoos, antiperspirants, antifungals, wart removers, and minoxidil.",
+    "Do not imply supportive cosmetic products diagnose, treat, cure, prevent, or mitigate a disease.",
+    "Place affiliate disclosure close to affiliate recommendations, not only in the footer.",
+    "Supplements are delayed unless substantiation, DSHEA disclaimer, claim notification, adverse-event process, and manufacturing/quality review are completed."
+  ],
+  "ownedWhiteLabel": [
+    {
+      "id": "gentle-cleanser",
+      "name": "Gentle Cleanser",
+      "status": "phase_1_candidate",
+      "channel": "owned_white_label",
+      "regulatoryBucket": "cosmetic",
+      "category": "cleanser",
+      "claimSafeCopy": "Fragrance-free, non-stripping cleanser for daily use.",
+      "avoidClaims": [
+        "treats acne",
+        "clears rosacea",
+        "antibacterial",
+        "heals eczema",
+        "repairs the skin barrier"
+      ],
+      "conditionSupport": [
+        "acne",
+        "rosacea",
+        "melasma",
+        "aging",
+        "seborrheic dermatitis",
+        "perioral dermatitis",
+        "folliculitis",
+        "general sensitive skin"
+      ]
+    },
+    {
+      "id": "barrier-moisturizer",
+      "name": "Barrier Moisturizer",
+      "status": "phase_1_candidate",
+      "channel": "owned_white_label",
+      "regulatoryBucket": "cosmetic",
+      "category": "moisturizer",
+      "claimSafeCopy": "Comfortable daily hydration for dry or sensitive-feeling skin.",
+      "avoidClaims": [
+        "heals eczema",
+        "repairs barrier",
+        "anti-inflammatory",
+        "treats dermatitis",
+        "restores skin function"
+      ],
+      "conditionSupport": [
+        "rosacea",
+        "melasma",
+        "aging",
+        "keratosis pilaris",
+        "perioral dermatitis",
+        "general dry skin"
+      ]
+    },
+    {
+      "id": "oil-free-moisturizer",
+      "name": "Oil-Free Moisturizer",
+      "status": "phase_1_candidate",
+      "channel": "owned_white_label",
+      "regulatoryBucket": "cosmetic",
+      "category": "moisturizer",
+      "claimSafeCopy": "Lightweight hydration for oily or combination skin.",
+      "avoidClaims": [
+        "non-comedogenic unless substantiated",
+        "prevents acne",
+        "controls sebum",
+        "shrinks pores"
+      ],
+      "conditionSupport": [
+        "acne",
+        "hairline/face routines",
+        "general oily skin"
+      ]
+    },
+    {
+      "id": "rough-skin-body-lotion",
+      "name": "Rough-Feeling Skin Body Lotion",
+      "status": "phase_1_or_2_candidate",
+      "channel": "owned_white_label",
+      "regulatoryBucket": "cosmetic_if_claims_remain_appearance_only",
+      "category": "body moisturizer",
+      "claimSafeCopy": "Daily body hydration that helps skin feel smoother and less dry.",
+      "avoidClaims": [
+        "treats KP",
+        "keratolytic treatment",
+        "unplugs follicles",
+        "removes bumps"
+      ],
+      "conditionSupport": [
+        "keratosis pilaris",
+        "dry body skin",
+        "friction-prone areas"
+      ]
+    },
+    {
+      "id": "calm-looking-serum",
+      "name": "Calm-Looking Serum",
+      "status": "phase_2_candidate_after_claim_review",
+      "channel": "owned_white_label",
+      "regulatoryBucket": "cosmetic_if_claims_remain_appearance_only",
+      "category": "serum",
+      "claimSafeCopy": "Lightweight layer for skin that looks easily flushed or feels reactive.",
+      "avoidClaims": [
+        "reduces inflammation",
+        "treats rosacea",
+        "calms flare",
+        "reduces blood vessels",
+        "anti-inflammatory"
+      ],
+      "conditionSupport": [
+        "redness-prone skin",
+        "rosacea support",
+        "sensitive-feeling skin"
+      ]
+    }
+  ],
+  "affiliateOnly": [
+    {
+      "id": "mineral-sunscreen",
+      "name": "Mineral Sunscreen SPF 30+",
+      "status": "affiliate_first",
+      "channel": "affiliate_or_curated_third_party",
+      "regulatoryBucket": "otc_drug",
+      "category": "sun protection",
+      "claimSafeCopy": "Broad-spectrum sunscreen used as directed with other sun-protective measures.",
+      "reasonAffiliateFirst": "Sunscreen is an OTC drug category in the U.S.; use established compliant products before building your own.",
+      "conditionSupport": [
+        "melasma",
+        "dark spots",
+        "aging",
+        "rosacea",
+        "acne",
+        "post-procedure avoidance",
+        "daily routine"
+      ]
+    },
+    {
+      "id": "tinted-mineral-sunscreen",
+      "name": "Tinted Mineral Sunscreen",
+      "status": "affiliate_first",
+      "channel": "affiliate_or_curated_third_party",
+      "regulatoryBucket": "otc_drug_plus_cosmetic_tint",
+      "category": "sun protection",
+      "claimSafeCopy": "Tinted broad-spectrum sunscreen option for daily photoprotection routines.",
+      "reasonAffiliateFirst": "Regulated sunscreen category; color/tint and claims require additional review.",
+      "conditionSupport": [
+        "melasma",
+        "dark spots",
+        "redness-prone skin"
+      ]
+    },
+    {
+      "id": "dandruff-shampoo",
+      "name": "Medicated Dandruff Shampoo",
+      "status": "affiliate_first",
+      "channel": "affiliate_or_curated_third_party",
+      "regulatoryBucket": "otc_drug",
+      "category": "scalp",
+      "claimSafeCopy": "Third-party medicated shampoo category for scalp flaking routines when appropriate.",
+      "reasonAffiliateFirst": "Dandruff/seborrheic dermatitis treatment claims make this an OTC drug category.",
+      "conditionSupport": [
+        "seborrheic dermatitis",
+        "dandruff support"
+      ]
+    },
+    {
+      "id": "acne-wash",
+      "name": "OTC Acne Wash",
+      "status": "affiliate_first",
+      "channel": "affiliate_or_curated_third_party",
+      "regulatoryBucket": "otc_drug",
+      "category": "acne medication",
+      "claimSafeCopy": "Third-party OTC acne medication category, separate from prescription care.",
+      "reasonAffiliateFirst": "Benzoyl peroxide and salicylic acid acne claims are OTC drug territory.",
+      "conditionSupport": [
+        "acne"
+      ]
+    },
+    {
+      "id": "antiperspirant",
+      "name": "Clinical-Strength Antiperspirant",
+      "status": "affiliate_first",
+      "channel": "affiliate_or_curated_third_party",
+      "regulatoryBucket": "otc_drug",
+      "category": "sweat",
+      "claimSafeCopy": "Third-party antiperspirant category used as directed for sweat support.",
+      "reasonAffiliateFirst": "Antiperspirants are OTC drug/cosmetic products; avoid owning at launch.",
+      "conditionSupport": [
+        "sweating",
+        "hyperhidrosis support"
+      ]
+    },
+    {
+      "id": "otc-antifungal",
+      "name": "OTC Antifungal Cream",
+      "status": "affiliate_first_or_pharmacy_recommendation",
+      "channel": "affiliate_or_curated_third_party",
+      "regulatoryBucket": "otc_drug",
+      "category": "antifungal",
+      "claimSafeCopy": "Third-party OTC antifungal category when the diagnosis and location fit.",
+      "reasonAffiliateFirst": "Antifungal claims are drug claims; many patients still need diagnostic confirmation or prescription therapy.",
+      "conditionSupport": [
+        "fungal infections",
+        "intertrigo when yeast/fungal features are suspected"
+      ]
+    },
+    {
+      "id": "otc-wart-remover",
+      "name": "OTC Wart Remover",
+      "status": "affiliate_first_with_restrictions",
+      "channel": "affiliate_or_curated_third_party",
+      "regulatoryBucket": "otc_drug",
+      "category": "wart medication",
+      "claimSafeCopy": "Third-party non-genital wart category when appropriate and used exactly as labeled.",
+      "reasonAffiliateFirst": "Wart-removal claims are drug claims; not for genital, facial, infected, or uncertain lesions.",
+      "conditionSupport": [
+        "common warts only"
+      ]
+    },
+    {
+      "id": "minoxidil",
+      "name": "Topical Minoxidil",
+      "status": "affiliate_or_visit_guided",
+      "channel": "affiliate_or_curated_third_party",
+      "regulatoryBucket": "otc_drug",
+      "category": "hair loss",
+      "claimSafeCopy": "Third-party hair regrowth medication category when it fits the clinical picture.",
+      "reasonAffiliateFirst": "Hair regrowth claims are drug claims; pair with visit guidance and safety counseling.",
+      "conditionSupport": [
+        "hair loss"
+      ]
+    }
+  ],
+  "deferOrAvoidAtLaunch": [
+    {
+      "name": "Eyelash growth serum",
+      "reason": "Eyelash growth claims can create drug claims. Keep bimatoprost-style care inside the prescription visit workflow. Avoid cosmetic lash-growth claims."
+    },
+    {
+      "name": "Skin-lightening/bleaching products",
+      "reason": "Pigment and bleaching claims can trigger drug regulation and additional safety scrutiny. Use visit-based prescription decisions and affiliate SPF first."
+    },
+    {
+      "name": "Anti-aging products claiming collagen, wrinkle removal, regeneration, or lifting",
+      "reason": "Structure/function anti-aging claims are high risk. Cosmetic copy should stay appearance-focused."
+    },
+    {
+      "name": "Antibacterial/antimicrobial body wash",
+      "reason": "Antibacterial or infection-prevention claims can make a cleanser a drug. Avoid unless intentionally building an OTC drug product."
+    },
+    {
+      "name": "Supplements as owned line",
+      "reason": "Delay until substantiation, label review, adverse-event process, DSHEA disclaimer placement, and FDA notification workflow are ready."
+    }
+  ],
+  "conditionProductMap": {
+    "acne": {
+      "ownedSupport": [
+        "gentle-cleanser",
+        "oil-free-moisturizer"
+      ],
+      "affiliate": [
+        "acne-wash",
+        "mineral-sunscreen"
+      ],
+      "rx": "visit-dependent"
+    },
+    "rosacea": {
+      "ownedSupport": [
+        "gentle-cleanser",
+        "barrier-moisturizer",
+        "calm-looking-serum"
+      ],
+      "affiliate": [
+        "mineral-sunscreen",
+        "tinted-mineral-sunscreen"
+      ],
+      "rx": "visit-dependent"
+    },
+    "melasma_dark_spots": {
+      "ownedSupport": [
+        "gentle-cleanser",
+        "barrier-moisturizer"
+      ],
+      "affiliate": [
+        "tinted-mineral-sunscreen",
+        "mineral-sunscreen"
+      ],
+      "rx": "visit-dependent"
+    },
+    "aging": {
+      "ownedSupport": [
+        "gentle-cleanser",
+        "barrier-moisturizer"
+      ],
+      "affiliate": [
+        "mineral-sunscreen"
+      ],
+      "rx": "visit-dependent"
+    },
+    "hair_loss": {
+      "ownedSupport": [],
+      "affiliate": [
+        "minoxidil"
+      ],
+      "rx": "visit-dependent"
+    },
+    "seborrheic_dermatitis": {
+      "ownedSupport": [
+        "gentle-cleanser"
+      ],
+      "affiliate": [
+        "dandruff-shampoo"
+      ],
+      "rx": "visit-dependent"
+    },
+    "sweating": {
+      "ownedSupport": [],
+      "affiliate": [
+        "antiperspirant"
+      ],
+      "rx": "visit-dependent"
+    },
+    "keratosis_pilaris": {
+      "ownedSupport": [
+        "rough-skin-body-lotion"
+      ],
+      "affiliate": [],
+      "rx": "usually not first-line"
+    },
+    "fungal_infections": {
+      "ownedSupport": [],
+      "affiliate": [
+        "otc-antifungal"
+      ],
+      "rx": "visit-dependent"
+    },
+    "intertrigo": {
+      "ownedSupport": [],
+      "affiliate": [
+        "otc-antifungal"
+      ],
+      "rx": "visit-dependent"
+    },
+    "warts": {
+      "ownedSupport": [],
+      "affiliate": [
+        "otc-wart-remover"
+      ],
+      "rx": "visit-dependent"
+    },
+    "genital_warts": {
+      "ownedSupport": [],
+      "affiliate": [],
+      "rx": "visit-dependent only"
+    },
+    "herpes": {
+      "ownedSupport": [],
+      "affiliate": [],
+      "rx": "visit-dependent"
+    },
+    "scabies": {
+      "ownedSupport": [],
+      "affiliate": [],
+      "rx": "visit-dependent"
+    },
+    "impetigo": {
+      "ownedSupport": [],
+      "affiliate": [],
+      "rx": "visit-dependent"
+    },
+    "hs": {
+      "ownedSupport": [],
+      "affiliate": [],
+      "rx": "visit-dependent/triage-dependent"
+    },
+    "aphthous_ulcers": {
+      "ownedSupport": [],
+      "affiliate": [],
+      "rx": "visit-dependent"
+    }
+  }
+}
